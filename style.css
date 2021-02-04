@@ -10,18 +10,18 @@
 body {
     width: 100%;
     min-height: 100vh;
+    background-color: rgb(243, 243, 243);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: rgb(243,243,243);
 }
 
 .instagram-wrapper {
     display: flex;
     align-items: center;
     justify-content: start;
-    width: 120%;
+    width: 60%;
     height: 100vh;
 }
 
@@ -38,8 +38,8 @@ body {
 
 .instagram-continue {
     display: flex;
-    align-items: center; /*horizontal*/
-    justify-content: space-around; /*vertical*/
+    align-items: center;
+    justify-content: space-around;
     flex-direction: column;
     width: 50%;
     min-height: 34rem;
@@ -47,21 +47,22 @@ body {
 
 .group {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: #fff;
+    background-color: #ffffff;
     width: 100%;
     padding: 1.3rem 0;
     border: 1px solid lightgray;
-}
+} 
 
+/* net-child(nº do elemento) pega os filhos de um elemento*/
 .group:nth-child(1) {
     min-height: 19rem;
 }
 
-.instagram-logo{
-    width: 200px;
+.instagram-logo {
+    height: 3rem;
 }
 
 .profile-photo {
@@ -70,6 +71,7 @@ body {
     align-items: center;
     border-radius: 50%;
     overflow: hidden;
+
 }
 
 .profile-photo img {
@@ -78,7 +80,7 @@ body {
 
 .instagram-login {
     background-color: #0095f6;
-    color: #fff;
+    color: #ffffff;
     padding: 8px;
     border-radius: 4px;
 }
@@ -89,11 +91,11 @@ body {
 }
 
 .not-account {
-    color: rgb(160,160,160);
+    color: rgb(160, 160, 160);
 }
 
 .link-blue {
-    color: #0095f6;
+    color: #0095f6
 }
 
 .get-the-app {
@@ -114,24 +116,30 @@ body {
 }
 
 .app-download {
-    height: 3.5rem;
+    height: 3rem;
     width: 10rem;
     background-size: cover;
 }
 
 .app-download:nth-child(1) {
-    background-image: url('/img/igperfil.jpg');
+    background-image: url('./Imagens/btn_apple.png');
 }
 
 .app-download:nth-child(2) {
-    background-image: url('/img/google.jpg');
+    background-image: url('./Imagens/btn_google.png');
 }
-@media (max-width: 900px) {
+
+@media (max-width: 1024px) {
     .instagram-wrapper {
         width: 90%;
     }
 }
+
 @media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
     .instagram-wrapper {
         width: 90%;
     }
@@ -142,5 +150,9 @@ body {
 
     .instagram-continue {
         width: 100%;
+    }
+
+    .group {
+        border: 1px solid transparent;
     }
 }
